@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
-function App() {
-  return <div>Hello world</div>;
-}
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const increamentCount = () => {
+    setCount(count + 1);
+  };
+
+  return <button onClick={increamentCount}>I was clicked {count} times</button>;
+};
 
 export default App;
