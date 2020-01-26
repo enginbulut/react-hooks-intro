@@ -12,6 +12,8 @@ export default function Login() {
       password
     };
     setUser(userData);
+    setUsername("");
+    setPassword("");
   };
   return (
     <div
@@ -32,11 +34,13 @@ export default function Login() {
           type="text"
           placeholder="Username"
           onChange={event => setUsername(event.target.value)}
+          value={username}
         />
         <input
           type="text"
           placeholder="Password"
           onChange={event => setPassword(event.target.value)}
+          value={password}
         />
         <button type="submit">Submit</button>
       </form>
